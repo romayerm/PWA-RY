@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guinea Pig Sounds</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      margin-bottom: 1em;
+    }
+    #description {
+      max-width: 400px;
+      margin: 0 auto 1em;
+      font-size: 0.95em;
+      color: #555;
+    }
+    button, .arrow {
+      padding: 0.5em 1em;
+      margin: 0.5em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .arrow {
+      font-size: 2em;
+      border: none;
+      background: none;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="soundImage" src="" alt="Guinea pig image" />
+  <h2 id="soundTitle">Sound Title</h2>
+  <p id="description">Sound description will go here.</p>
+  <button id="playButton">Play example</button>
+  <div>
+    <button class="arrow" id="prevBtn">⟵</button>
+    <button class="arrow" id="nextBtn">⟶</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

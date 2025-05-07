@@ -42,12 +42,6 @@
         "audio": "assets/audio/.mp3"
     },
     {
-        "title": "Hissing",
-        "text": "A short, sharp exhalation sound used as a warning signal. It indicates that the guinea pig feels threatened or irritated and wants to be left alone.",
-        "image": "assets/pictures/8.jpg",
-        "audio": "assets/audio/.mp3"
-    },
-    {
         "title": "Squeaking",
         "text": "A quick, high-pitched cry indicating mild distress, fear, or objection. It’s often a reaction to unwanted handling or dominance behavior from another guinea pig.",
         "image": "assets/pictures/9.jpg",

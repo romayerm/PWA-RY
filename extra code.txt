@@ -1,0 +1,6 @@
+    {
+        "title": "Hissing",
+        "text": "A short, sharp exhalation sound used as a warning signal. It indicates that the guinea pig feels threatened or irritated and wants to be left alone.",
+        "image": "assets/pictures/8.jpg",
+        "audio": "assets/audio/.mp3"
+    },

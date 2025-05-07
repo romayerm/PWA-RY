@@ -4,3 +4,9 @@
         "image": "assets/pictures/8.jpg",
         "audio": "assets/audio/.mp3"
     },
+    {
+        "title": "Squeaking",
+        "text": "A quick, high-pitched cry indicating mild distress, fear, or objection. It’s often a reaction to unwanted handling or dominance behavior from another guinea pig.",
+        "image": "assets/pictures/9.jpg",
+        "audio": "assets/audio/squeaking.mp3"
+    },

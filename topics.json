@@ -21,37 +21,31 @@
         "title": "Teeth Chattering",
         "text": "A rapid clicking made by grinding the teeth, used as a clear warning to back off. It’s a sign of agitation or potential aggression, usually during social tension.",
         "image": "assets/pictures/4.jpg",
-        "audio": "assets/audio/.mp3"
+        "audio": "assets/audio/teeth.mp3"
     },
     {
         "title": "Chirping",
         "text": "A rare, bird-like series of high-pitched notes. Its cause isn’t fully understood, but it may occur in times of stress, confusion, or heightened alertness.",
         "image": "assets/pictures/5.jpg",
-        "audio": "assets/audio/.mp3"
+        "audio": "assets/audio/chirping.mp3"
     },
     {
         "title": "Whining",
-        "text": "A high-pitched, drawn-out whimper used to express discomfort or irritation. It often occurs when a guinea pig is unhappy with being touched or disturbed.",
+        "text": "A high-pitched, drawn-out whimper used to express discomfort, pain or irritation. It often occurs when a guinea pig is unhappy with being touched or disturbed.",
         "image": "assets/pictures/6.jpg",
-        "audio": "assets/audio/.mp3"
+        "audio": "assets/audio/whining.mp3"
     },
     {
         "title": "Cooing",
         "text": "A soft, soothing murmur often used between bonded guinea pigs, especially from mothers to young. It reflects comfort and emotional bonding.",
         "image": "assets/pictures/7.jpg",
-        "audio": "assets/audio/.mp3"
-    },
-    {
-        "title": "Squeaking",
-        "text": "A quick, high-pitched cry indicating mild distress, fear, or objection. It’s often a reaction to unwanted handling or dominance behavior from another guinea pig.",
-        "image": "assets/pictures/9.jpg",
-        "audio": "assets/audio/.mp3"
+        "audio": "assets/audio/cooing.mp3"
     },
     {
         "title": "Rumbling",
         "text": "A deep, vibrating sound used mainly during mating behavior or to establish dominance. Often accompanied by body language such as slow movements or posturing.",
         "image": "assets/pictures/10.jpg",
-        "audio": "assets/audio/.mp3"
+        "audio": "assets/audio/rumbling.mp3"
     }
   ]
   

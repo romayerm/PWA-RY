@@ -39,6 +39,13 @@ button {
   cursor: pointer;
 }
 
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
 button:hover {
   background-color: #45a049;
 }

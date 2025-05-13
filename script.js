@@ -95,12 +95,12 @@ nextBtn.onclick = () => {
   updateDisplay();
 };
 
+let correctItem = null;
 function loadQuiz() {
   const correctIndex = Math.floor(Math.random() * data.length);
   const correctItem = data[correctIndex];
 
   quizAudio.src = correctItem.audio;
-  quizAudio.play();
 
 
   let options = [correctItem.title];
@@ -114,16 +114,29 @@ function loadQuiz() {
   options = options.sort(() => Math.random() - 0.5);
 
   quizOptions.innerHTML = "";
+  quizResult.innerHTML = "";
   options.forEach(option => {
     const btn = document.createElement("button");
     btn.textContent = option;
     btn.onclick = () => {
       if (option === correctItem.title) {
         successSound.play();
-        quizResult.innerHTML = `<img src="assets/confetti.gif" alt="Confetti" style="width:100px;">`;
+        quizResult.innerHTML = `<div class="confetti-overlay">
+        <img src="assets/pictures/confetti.gif" alt="Confetti" class="confetti-gif">
+        </div>
+        `;
+        setTimeout(() => {
+        quizResult.innerHTML = "";
+        }, 3000);
       } else {
         failSound.play();
-        quizResult.innerHTML = `<span style="font-size: 3rem;">😢</span>`;
+        quizResult.innerHTML = `<div class="tomato-overlay">
+        <img src="assets/pictures/tomato.gif" alt="Rotten Tomato" class="tomato-gif">
+        </div>
+        `;
+        setTimeout(() => {
+        quizResult.innerHTML = "";
+        }, 3000);
       }
     };
     quizOptions.appendChild(btn);

@@ -17,7 +17,6 @@ const urlsToCache = [
   "/assets/pictures/7.jpg",
   "/assets/pictures/8.jpg",
 
-
   "/assets/audio/wheeking.mp3",
   "/assets/audio/chutting.mp3",
   "/assets/audio/purring.mp3",
@@ -27,16 +26,14 @@ const urlsToCache = [
   "/assets/audio/cooing.mp3",
   "/assets/audio/rumbling.mp3",
 
-
   "/assets/audio/correct.mp3",
   "/assets/audio/incorrect.mp3",
   "/assets/pictures/confetti.gif",
   "/assets/pictures/tomato.gif",
 
-
   "/assets/pictures/mascot.gif",
+  "/assets/pictures/mascot_still.png",
   "/assets/pictures/background.png", 
-
 
   "/assets/pictures/icon-192.png",
   "/assets/pictures/icon-512.png"

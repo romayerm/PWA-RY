@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 2em;
-  background-color: #f8f8f8;
+  background: url("assets/pictures/background.png") no-repeat center center fixed;
+  background-size: cover;
   color: #333;
 }
 
@@ -48,4 +49,14 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+#mascot {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  height: auto;
+  z-index: 1000;
+  pointer-events: none;
 }

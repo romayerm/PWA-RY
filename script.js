@@ -9,6 +9,26 @@ const playButton = document.getElementById("playButton");
 const stopButton = document.getElementById("stopButton");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
+const mascot = document.getElementById("mascot");
+
+let mouseMoveTimeout;
+
+function freezeMascot() {
+  mascot.src = "assets/pictures/mascot_still.png";
+}
+
+function playMascot() {
+  mascot.src = "assets/pictures/mascot.gif";
+}
+
+document.addEventListener("mousemove", () => {
+  playMascot();
+
+  clearTimeout(mouseMoveTimeout);
+  mouseMoveTimeout = setTimeout(() => {
+    freezeMascot();
+  }, 1000); // Freeze after 1 second of inactivity
+});
 
 function stopAudio() {
   if (currentAudio) {

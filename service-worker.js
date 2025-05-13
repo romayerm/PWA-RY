@@ -4,18 +4,40 @@ const urlsToCache = [
   "/index.html",
   "/styles.css",
   "/script.js",
-  "/topics.json",
   "/manifest.json",
-  "/assets/images/wheeking.png",
-  "/assets/images/chutting.png",
-  "/assets/images/purring.png",
+  "/topics.json",
+
+
+  "/assets/pictures/1.jpg",
+  "/assets/pictures/2.jpg",
+  "/assets/pictures/3.jpg",
+  "/assets/pictures/4.jpg",
+  "/assets/pictures/5.jpg",
+  "/assets/pictures/6.jpg",
+  "/assets/pictures/7.jpg",
+  "/assets/pictures/8.jpg",
+
+
+  "/assets/audio/wheeking.mp3",
+  "/assets/audio/chutting.mp3",
+  "/assets/audio/purring.mp3",
   "/assets/audio/teeth.mp3",
   "/assets/audio/chirping.mp3",
   "/assets/audio/whining.mp3",
   "/assets/audio/cooing.mp3",
-  "/assets/audio/hissing.mp3",
-  "/assets/audio/squeaking.mp3",
   "/assets/audio/rumbling.mp3",
+
+
+  "/assets/audio/correct.mp3",
+  "/assets/audio/incorrect.mp3",
+  "/assets/media/confetti.gif",
+  "/assets/media/tomato.gif",
+
+
+  "/assets/media/mascot.gif",
+  "/assets/media/background.png", 
+
+
   "/icons/icon-192.png",
   "/icons/icon-512.png"
 ];

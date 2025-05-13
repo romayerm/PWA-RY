@@ -97,6 +97,8 @@ function loadQuiz() {
   const correctIndex = Math.floor(Math.random() * data.length);
   correctItem = data[correctIndex];
 
+  quizAudio.src = correctItem.audio;
+
   let options = [correctItem.title];
   while (options.length < 3) {
     let random = data[Math.floor(Math.random() * data.length)].title;

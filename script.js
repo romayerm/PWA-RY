@@ -165,4 +165,8 @@ navLearn.onclick = () => {
 };
 navQuiz.onclick = () => showPage("quiz");
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+
 });

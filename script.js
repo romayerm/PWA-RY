@@ -38,10 +38,10 @@ fetch("topics.json")
 const mascotGif = document.getElementById("mascot");
 let mouseTimer;
 document.addEventListener("mousemove", () => {
-  mascotGif.src = "assets/mascot_still.png"; // Freeze when moving
+  mascotGif.src = "assets/pictures/mascot_still.png"; 
   clearTimeout(mouseTimer);
   mouseTimer = setTimeout(() => {
-    mascotGif.src = "assets/mascot.gif"; // Resume playing when still
+    mascotGif.src = "assets/pictures/mascot.gif"; 
   }, 300);
 });
 
@@ -62,7 +62,6 @@ function updateDisplay() {
 }
 
 function showPage(pageId) {
-  // Stop audio if navigating
   stopAudio();
   quizAudio.pause();
   quizAudio.currentTime = 0;
@@ -73,7 +72,6 @@ document.querySelectorAll(".page").forEach(section => {
 });
 document.getElementById(pageId).classList.add("active");
 
-  // If quiz page, load new question
   if (pageId === "quiz") {
     loadQuiz();
   }
@@ -104,7 +102,7 @@ function loadQuiz() {
   quizAudio.src = correctItem.audio;
   quizAudio.play();
 
-  // Pick 2 other random, non-duplicate answers
+
   let options = [correctItem.title];
   while (options.length < 3) {
     let random = data[Math.floor(Math.random() * data.length)].title;
@@ -113,10 +111,8 @@ function loadQuiz() {
     }
   }
 
-  // Shuffle options
   options = options.sort(() => Math.random() - 0.5);
 
-  // Render buttons
   quizOptions.innerHTML = "";
   options.forEach(option => {
     const btn = document.createElement("button");
@@ -134,11 +130,10 @@ function loadQuiz() {
   });
 }
 
-// Navigation buttons
 navWelcome.onclick = () => showPage("welcome");
 navLearn.onclick = () => {
   showPage("learn");
-  updateDisplay(); // Refresh Learn content
+  updateDisplay(); 
 };
 navQuiz.onclick = () => showPage("quiz");
 

@@ -11,21 +11,18 @@ const stopButton = document.getElementById("stopButton");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
-const welcomeSection = document.getElementById("welcome");
-const learnSection = document.getElementById("learn");
-const quizSection = document.getElementById("quiz");
-
 const navWelcome = document.getElementById("navWelcome");
 const navLearn = document.getElementById("navLearn");
 const navQuiz = document.getElementById("navQuiz");
 
+const quizPlayBtn = document.getElementById("quizPlayBtn");
+const nextQuizBtn = document.getElementById("nextQuizBtn");
 const quizAudio = new Audio();
-const quizQuestion = document.getElementById("quizQuestion");
 const quizOptions = document.getElementById("quizOptions");
 const quizResult = document.getElementById("quizResult");
 
-const successSound = new Audio("assets/audio/success.mp3");
-const failSound = new Audio("assets/audio/fail.mp3");
+const successSound = new Audio("assets/audio/correct.mp3");
+const failSound = new Audio("assets/audio/incorrect.mp3");
 
 fetch("topics.json")
   .then(response => response.json())
@@ -33,7 +30,7 @@ fetch("topics.json")
     data = json;
     updateDisplay();
     showPage("welcome");
-  });
+  }); //good
 
 const mascotGif = document.getElementById("mascot");
 let mouseTimer;
@@ -43,7 +40,7 @@ document.addEventListener("mousemove", () => {
   mouseTimer = setTimeout(() => {
     mascotGif.src = "assets/pictures/mascot.gif"; 
   }, 300);
-});
+}); //good
 
 function stopAudio() {
   if (currentAudio) {
@@ -98,10 +95,7 @@ nextBtn.onclick = () => {
 let correctItem = null;
 function loadQuiz() {
   const correctIndex = Math.floor(Math.random() * data.length);
-  const correctItem = data[correctIndex];
-
-  quizAudio.src = correctItem.audio;
-
+  correctItem = data[correctIndex];
 
   let options = [correctItem.title];
   while (options.length < 3) {
@@ -121,27 +115,46 @@ function loadQuiz() {
     btn.onclick = () => {
       if (option === correctItem.title) {
         successSound.play();
+        setTimeout(() => {
+        successSound.pause();
+        successSound.currentTime = 0;
+        }, 4000);
         quizResult.innerHTML = `<div class="confetti-overlay">
         <img src="assets/pictures/confetti.gif" alt="Confetti" class="confetti-gif">
         </div>
         `;
         setTimeout(() => {
         quizResult.innerHTML = "";
-        }, 3000);
+        }, 4000);
       } else {
         failSound.play();
+        setTimeout(() => {
+        failSound.pause();
+        failSound.currentTime = 0;
+        }, 4000);
         quizResult.innerHTML = `<div class="tomato-overlay">
         <img src="assets/pictures/tomato.gif" alt="Rotten Tomato" class="tomato-gif">
         </div>
         `;
         setTimeout(() => {
         quizResult.innerHTML = "";
-        }, 3000);
+        }, 4000);
       }
     };
     quizOptions.appendChild(btn);
   });
 }
+
+quizPlayBtn.onclick = () => {
+  if (correctItem && correctItem.audio) {
+    quizAudio.src = correctItem.audio;
+    quizAudio.play();
+  }
+};
+
+nextQuizBtn.onclick = () => {
+  loadQuiz();
+};
 
 navWelcome.onclick = () => showPage("welcome");
 navLearn.onclick = () => {

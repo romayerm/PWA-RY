@@ -59,11 +59,10 @@ function showPage(pageId) {
   quizAudio.currentTime = 0;
   quizResult.innerHTML = "";
 
-  // Hide all
-  welcomeSection.style.display = "none";
-  learnSection.style.display = "none";
-  quizSection.style.display = "none";
-  document.getElementById(pageId).style.display = "block";
+document.querySelectorAll(".page").forEach(section => {
+  section.classList.remove("active");
+});
+document.getElementById(pageId).classList.add("active");
 
   // If quiz page, load new question
   if (pageId === "quiz") {

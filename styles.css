@@ -60,3 +60,34 @@ button:hover {
   z-index: 1000;
   pointer-events: none;
 }
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+nav {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+nav button {
+  background-color: #ff8c42;
+  color: white;
+  border-radius: 20px;
+  padding: 0.4em 1em;
+  font-weight: bold;
+  border: 2px solid #c95f1c;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+nav button:hover {
+  background-color: #e07b3c;
+}

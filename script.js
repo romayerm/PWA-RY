@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 let data = [];
 let currentIndex = 0;
 let currentAudio = null;
@@ -25,6 +26,14 @@ const quizResult = document.getElementById("quizResult");
 
 const successSound = new Audio("assets/audio/success.mp3");
 const failSound = new Audio("assets/audio/fail.mp3");
+
+fetch("topics.json")
+  .then(response => response.json())
+  .then(json => {
+    data = json;
+    updateDisplay();
+    showPage("welcome");
+  });
 
 const mascotGif = document.getElementById("mascot");
 let mouseTimer;
@@ -133,11 +142,4 @@ navLearn.onclick = () => {
 };
 navQuiz.onclick = () => showPage("quiz");
 
-showPage("welcome");
-
-fetch("topics.json")
-  .then(response => response.json())
-  .then(json => {
-    data = json;
-    updateDisplay();
-  });
+});

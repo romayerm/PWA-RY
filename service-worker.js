@@ -30,16 +30,16 @@ const urlsToCache = [
 
   "/assets/audio/correct.mp3",
   "/assets/audio/incorrect.mp3",
-  "/assets/media/confetti.gif",
-  "/assets/media/tomato.gif",
+  "/assets/pictures/confetti.gif",
+  "/assets/pictures/tomato.gif",
 
 
-  "/assets/media/mascot.gif",
-  "/assets/media/background.png", 
+  "/assets/pictures/mascot.gif",
+  "/assets/pictures/background.png", 
 
 
-  "/icons/icon-192.png",
-  "/icons/icon-512.png"
+  "/assets/pictures/icon-192.png",
+  "/assets/pictures/icon-512.png"
 ];
 
 self.addEventListener("install", event => {

@@ -93,6 +93,17 @@ button:hover {
   display: block;
 }
 
+#welcome.page.active,
+#quiz.page.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
 nav {
   position: absolute;
   top: 10px;

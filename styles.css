@@ -133,14 +133,14 @@ nav button:hover {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0);
   text-align: center;
   padding: 0.5em 0;
-  font-size: clamp(12px, 2.5vw, 24px);
+  font-size: clamp(8px, 2.5vw, 14px);
   color: #ff8c42;
   z-index: 10000;
   font-family: Arial, sans-serif;
 }
+
 .confetti-overlay {
   position: fixed;
   top: 0;

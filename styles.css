@@ -7,16 +7,15 @@ body {
   color: #333;
 }
 
-img {
+canvas.learnCanvas {
   width: 100%;
   max-width: 350px;
   height: auto;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center;
   border-radius: 6px;
   margin-bottom: 0.5em;
   box-sizing: border-box;
+  display: block;
 }
 
 h1 {
@@ -102,7 +101,7 @@ button:hover {
   min-height: 100vh;
   padding: 2em;
   box-sizing: border-box;
-  transform: translateY(-30%);
+  transform: translateY(-20%);
 }
 
 nav {

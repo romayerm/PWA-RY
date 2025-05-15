@@ -3,7 +3,8 @@ let data = [];
 let currentIndex = 0;
 let currentAudio = null;
 
-const img = document.getElementById("soundImage");
+const canvas = document.getElementById("soundImage");
+const ctx = canvas.getContext("2d");
 const title = document.getElementById("soundTitle");
 const desc = document.getElementById("description");
 const playButton = document.getElementById("playButton");
@@ -54,9 +55,37 @@ function stopAudio() {
 function updateDisplay() {
   stopAudio();
   const item = data[currentIndex];
-  img.src = item.image;
   title.innerText = item.title;
   desc.innerText = item.text;
+
+  const image = new Image();
+  image.src = item.image;
+
+  image.onload = () => {
+  canvas.width = 350;
+  canvas.height = 350;
+
+  const imgRatio = image.width / image.height;
+  const canvasRatio = canvas.width / canvas.height;
+
+  let sx, sy, sWidth, sHeight;
+
+  if (imgRatio > canvasRatio) {
+    sHeight = image.height;
+    sWidth = sHeight * canvasRatio;
+    sx = (image.width - sWidth) / 2;
+    sy = 0;
+  } else {
+    sWidth = image.width;
+    sHeight = sWidth / canvasRatio;
+    sx = 0;
+    sy = (image.height - sHeight) / 2;
+  }
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(image, sx, sy, sWidth, sHeight, 0, 0, canvas.width, canvas.height);
+};
+
 }
 
 function showPage(pageId) {

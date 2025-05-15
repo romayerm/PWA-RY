@@ -1,15 +1,27 @@
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   text-align: center;
-  margin: 2em;
+  margin: 0;
+  padding: 1em;
   background: url("assets/pictures/background.png") no-repeat center center fixed;
   background-size: cover;
   color: #333;
 }
 
+main {
+  flex: 1 0 auto;
+}
+
+footer, .mascot, .navbar {
+  flex-shrink: 0;
+}
+
 img {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
@@ -62,7 +74,14 @@ button:hover {
 }
 
 .page {
-  display: none;
+  padding: 1rem;
+  box-sizing: border-box;
+  padding-bottom: 120px;
+  max-width: 600px;
+  margin: auto;
+  padding-top: 3.5em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .page.active {

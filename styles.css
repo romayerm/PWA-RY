@@ -112,6 +112,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  z-index: 11000;
 }
 
 nav button {
@@ -135,7 +136,7 @@ nav button:hover {
   width: 100%;
   text-align: center;
   padding: 0.5em 0;
-  font-size: clamp(8px, 2.5vw, 14px);
+  font-size: clamp(8px, 1vw, 14px);
   color: #ff8c42;
   z-index: 10000;
   font-family: Arial, sans-serif;

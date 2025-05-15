@@ -102,7 +102,6 @@ button:hover {
   min-height: 100vh;
   padding: 2em;
   box-sizing: border-box;
-  transform: translateY(-10%);
 }
 
 nav {
@@ -128,19 +127,6 @@ nav button:hover {
   background-color: #e07b3c;
 }
 
-#pageFooter {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0);
-  text-align: center;
-  padding: 0.5em 0;
-  font-size: clamp(12px, 2.5vw, 24px);
-  color: #ff8c42;
-  z-index: 10000;
-  font-family: Arial, sans-serif;
-}
 .confetti-overlay {
   position: fixed;
   top: 0;

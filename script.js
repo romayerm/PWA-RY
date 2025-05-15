@@ -166,6 +166,16 @@ navLearn.onclick = () => {
 };
 navQuiz.onclick = () => showPage("quiz");
 
+document.addEventListener("click", (event) => {
+  if (!event.target.closest("#quizOptions")) {
+    successSound.pause();
+    successSound.currentTime = 0;
+    failSound.pause();
+    failSound.currentTime = 0;
+    quizResult.innerHTML = "";
+  }
+});
+
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
 }

@@ -22,6 +22,7 @@ const quizOptions = document.getElementById("quizOptions");
 const quizResult = document.getElementById("quizResult");
 
 const successSound = new Audio("assets/audio/correct.mp3");
+successSound.volume = 0.5;
 const failSound = new Audio("assets/audio/incorrect.mp3");
 
 fetch("topics.json")

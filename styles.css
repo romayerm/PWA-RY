@@ -173,6 +173,7 @@ nav button:hover {
   display: block;
 }
 
+#quizStopBtn,
 #quizPlayBtn {
   margin: 0.5em;
   padding: 0.6em 1.2em;

@@ -10,6 +10,7 @@ body {
 img {
   width: 500px;
   height: 500px;
+  max-width: calc(100vw - 20px);
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
@@ -17,14 +18,18 @@ img {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 3em;
+  color: #c95f1c;
   margin-bottom: 0.2em;
 }
 
 p {
-  font-size: 1em;
+  font-size: 2em;
   margin-bottom: 1em;
-  max-width: 500px;
+  color: #ff8c42;
+  width: 500px;
+  max-width: calc(100vw - 20px);
   margin-left: auto;
   margin-right: auto;
 }

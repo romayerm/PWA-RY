@@ -9,13 +9,13 @@ body {
 
 img {
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
   border-radius: 6px;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   box-sizing: border-box;
 }
 
@@ -24,7 +24,11 @@ img {
 h1 {
   font-family: "Arial Black", Gadget, sans-serif;
   font-size: 3em;
-  color: #c95f1c;
+  color: #ff8c42;
+  text-shadow: -1px -1px 0 #c95f1c,
+               1px -1px 0 #c95f1c,
+              -1px 1px 0 #c95f1c,
+               1px 1px 0 #c95f1c;
   margin-bottom: 0.2em;
 }
 

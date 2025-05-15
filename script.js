@@ -8,6 +8,7 @@ const title = document.getElementById("soundTitle");
 const desc = document.getElementById("description");
 const playButton = document.getElementById("playButton");
 const stopButton = document.getElementById("stopButton");
+const stopButton2 = document.getElementById("stopButton2");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
@@ -82,6 +83,7 @@ playButton.onclick = () => {
 };
 
 stopButton.onclick = stopAudio;
+stopButton2.onclick = stopAudio;
 
 prevBtn.onclick = () => {
   currentIndex = (currentIndex - 1 + data.length) % data.length;

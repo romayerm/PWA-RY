@@ -101,7 +101,7 @@ button:hover {
   min-height: 100vh;
   padding: 2em;
   box-sizing: border-box;
-  transform: translateY(-20%);
+  transform: translateY(-15%);
 }
 
 nav {

@@ -150,7 +150,7 @@ nav button:hover {
   margin: 0;
   padding: 0; 
   overflow: hidden;
-  z-index: 9999;
+  z-index: 11100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,7 +172,7 @@ nav button:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 9999;
+  z-index: 11100;
   display: flex;
   align-items: center;
   justify-content: center;

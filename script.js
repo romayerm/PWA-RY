@@ -151,26 +151,40 @@ function loadQuiz() {
         successSound.pause();
         successSound.currentTime = 0;
         }, 4000);
-        quizResult.innerHTML = `<div class="confetti-overlay">
-        <img src="assets/pictures/confetti.gif" alt="Confetti" class="confetti-gif">
-        </div>
-        `;
-        setTimeout(() => {
-        quizResult.innerHTML = "";
-        }, 4000);
+          const confettiOverlay = document.createElement("div");
+          confettiOverlay.className = "confetti-overlay";
+
+          const confettiGif = document.createElement("img");
+          confettiGif.src = "assets/pictures/confetti.gif";
+          confettiGif.alt = "Confetti";
+          confettiGif.className = "confetti-gif";
+
+          confettiOverlay.appendChild(confettiGif);
+          document.body.appendChild(confettiOverlay);
+
+          setTimeout(() => {
+            confettiOverlay.remove();
+          }, 4000);
       } else {
         failSound.play();
         setTimeout(() => {
         failSound.pause();
         failSound.currentTime = 0;
         }, 4000);
-        quizResult.innerHTML = `<div class="tomato-overlay">
-        <img src="assets/pictures/tomato.gif" alt="Rotten Tomato" class="tomato-gif">
-        </div>
-        `;
-        setTimeout(() => {
-        quizResult.innerHTML = "";
-        }, 4000);
+          const tomatoOverlay = document.createElement("div");
+          tomatoOverlay.className = "tomato-overlay";
+
+          const tomatoGif = document.createElement("img");
+          tomatoGif.src = "assets/pictures/tomato.gif";
+          tomatoGif.alt = "Rotten Tomato";
+          tomatoGif.className = "tomato-gif";
+
+          tomatoOverlay.appendChild(tomatoGif);
+          document.body.appendChild(tomatoOverlay);
+
+          setTimeout(() => {
+            tomatoOverlay.remove();
+          }, 4000);
       }
     };
     quizOptions.appendChild(btn);
@@ -213,7 +227,7 @@ document.addEventListener("click", (event) => {
     successSound.currentTime = 0;
     failSound.pause();
     failSound.currentTime = 0;
-    quizResult.innerHTML = "";
+    document.querySelectorAll(".confetti-overlay, .tomato-overlay").forEach(el => el.remove());
   }
 });
 

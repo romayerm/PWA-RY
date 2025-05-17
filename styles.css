@@ -114,6 +114,7 @@ nav {
   z-index: 11000;
 }
 
+
 nav button {
   background-color: #ff8c42;
   color: white;
@@ -196,6 +197,11 @@ nav button:hover {
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+#prevBtn,
+#nextBtn {
+  z-index:10100;
 }
 
 #quizStopBtn,
